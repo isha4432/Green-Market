@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Organic and Fresh Vegetables" />
+  <title>Green Market</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-leaf">🌿</span>
+        <span>Green<strong>Market</strong></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#farmers" class="nav-link">Our Farmers</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-cart" id="cartBtn">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="btn-primary-sm">Shop Now</button>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-text" data-aos="fade-right">
+        <span class="hero-badge">🌱 100% Organic & Fresh</span>
+        <h1 class="hero-title">
+          From Farm<br/>
+          <span class="accent">Directly</span> to<br/>
+          Your Table
+        </h1>
+        <p class="hero-desc">
+          Discover the freshest organic vegetables sourced directly from local farmers. 
+          No middlemen, no chemicals — just pure, wholesome goodness.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary">Shop Fresh Now</a>
+          <a href="#about" class="btn-outline">Learn More →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Happy Customers</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">120+</span><span class="stat-label">Organic Products</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Local Farmers</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="hero-circle">
+          <div class="circle-img">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80" alt="Fresh vegetables" />
+          </div>
+        </div>
+        <div class="floating-card card-1">
+          <span>🥦</span> Fresh Broccoli
+          <small>Just Harvested</small>
+        </div>
+        <div class="floating-card card-2">
+          <span>⭐</span> 4.9 Rating
+          <small>by 200+ buyers</small>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="features-strip">
+    <div class="features-container">
+      <div class="feature-item">
+        <span class="feature-icon">🚚</span>
+        <div>
+          <strong>Free Delivery</strong>
+          <p>On orders above ₹500</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🌿</span>
+        <div>
+          <strong>100% Organic</strong>
+          <p>Certified chemical-free</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">⚡</span>
+        <div>
+          <strong>Same Day Delivery</strong>
+          <p>Order before 10 AM</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔄</span>
+        <div>
+          <strong>Easy Returns</strong>
+          <p>Freshness guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories" id="categories">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Browse By Category</span>
+        <h2>Shop Our <span class="accent">Fresh Categories</span></h2>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card" onclick="filterProducts('leafy')">
+          <div class="cat-icon">🥬</div>
+          <span>Leafy Greens</span>
+          <small>12 Items</small>
+        </div>
+        <div class="category-card" onclick="filterProducts('root')">
+          <div class="cat-icon">🥕</div>
+          <span>Root Vegetables</span>
+          <small>8 Items</small>
+        </div>
+        <div class="category-card" onclick="filterProducts('fruits')">
+          <div class="cat-icon">🍅</div>
+          <span>Fruit Vegetables</span>
+          <small>15 Items</small>
+        </div>
+        <div class="category-card" onclick="filterProducts('herbs')">
+          <div class="cat-icon">🌿</div>
+          <span>Herbs & Spices</span>
+          <small>20 Items</small>
+        </div>
+        <div class="category-card" onclick="filterProducts('exotic')">
+          <div class="cat-icon">🥦</div>
+          <span>Exotic Veggies</span>
+          <small>10 Items</small>
+        </div>
+        <div class="category-card" onclick="filterProducts('seasonal')">
+          <div class="cat-icon">🌽</div>
+          <span>Seasonal Picks</span>
+          <small>18 Items</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products" id="products">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Fresh Picks</span>
+        <h2>Our <span class="accent">Best Sellers</span></h2>
+        <p>Handpicked fresh produce delivered daily from our partner farms</p>
+      </div>
+
+      <div class="products-filter">
+        <button class="filter-btn active" onclick="setFilter(this,'all')">All</button>
+        <button class="filter-btn" onclick="setFilter(this,'leafy')">Leafy</button>
+        <button class="filter-btn" onclick="setFilter(this,'root')">Root Veggies</button>
+        <button class="filter-btn" onclick="setFilter(this,'fruits')">Fruit Veggies</button>
+        <button class="filter-btn" onclick="setFilter(this,'herbs')">Herbs</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <section class="promo-banner">
+    <div class="banner-content">
+      <div class="banner-text">
+        <span class="banner-tag">Limited Time Offer</span>
+        <h2>Get <span>20% OFF</span> on your first order!</h2>
+        <p>Use code <strong>FRESHSTART</strong> at checkout. Valid on orders above ₹300.</p>
+        <a href="#products" class="btn-primary">Claim Offer Now</a>
+      </div>
+      <div class="banner-visual">
+        <img src="https://images.unsplash.com/photo-1506484381205-f7945653044d?w=500&q=80" alt="Fresh produce" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="section-container about-grid">
+      <div class="about-images">
+        <img class="about-img-main" src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80" alt="Farmer" />
+        <img class="about-img-small" src="https://images.unsplash.com/photo-1592921870789-04563d55041c?w=300&q=80" alt="Vegetables" />
+        <div class="about-badge">
+          <span class="badge-num">15+</span>
+          <span>Years of<br/>Experience</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-tag">About Green Market</span>
+        <h2>We Believe in <span class="accent">Pure & Natural</span> Food</h2>
+        <p>
+          Green Market was founded with a simple mission: connect conscious consumers directly with dedicated local farmers. 
+          We eliminate the supply chain waste, ensuring you get the freshest produce at fair prices while farmers earn what they deserve.
+        </p>
+        <p>
+          Every vegetable in our marketplace is grown using sustainable, organic practices — no pesticides, no GMOs, 
+          just the natural goodness of the earth.
+        </p>
+        <ul class="about-list">
+          <li>✅ Directly sourced from certified organic farms</li>
+          <li>✅ Daily freshness quality checks</li>
+          <li>✅ Supporting 50+ local farming families</li>
+          <li>✅ Eco-friendly packaging</li>
+        </ul>
+        <a href="#farmers" class="btn-primary">Meet Our Farmers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FARMERS SECTION -->
+  <section class="farmers" id="farmers">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">The People Behind</span>
+        <h2>Meet Our <span class="accent">Local Farmers</span></h2>
+        <p>Passionate growers who put their heart into every harvest</p>
+      </div>
+      <div class="farmers-grid">
+        <div class="farmer-card">
+          <div class="farmer-img">
+            <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=300&q=80" alt="Farmer Raju" />
+          </div>
+          <h3>Raju Sharma</h3>
+          <span class="farmer-location">📍 Vijayawada, AP</span>
+          <p>Specializes in leafy greens and has been farming organically for 20 years.</p>
+          <div class="farmer-badge">Organic Certified</div>
+        </div>
+        <div class="farmer-card">
+          <div class="farmer-img">
+            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=300&q=80" alt="Farmer Lakshmi" />
+          </div>
+          <h3>Lakshmi Devi</h3>
+          <span class="farmer-location">📍 Guntur, AP</span>
+          <p>Expert in growing chilies, tomatoes and traditional Andhra vegetables.</p>
+          <div class="farmer-badge">Award Winner</div>
+        </div>
+        <div class="farmer-card">
+          <div class="farmer-img">
+            <img src="https://images.unsplash.com/photo-1521566652839-697aa473761a?w=300&q=80" alt="Farmer Venkat" />
+          </div>
+          <h3>Venkat Reddy</h3>
+          <span class="farmer-location">📍 Krishna Dist., AP</span>
+          <p>Grows a wide variety of root vegetables using traditional water management techniques.</p>
+          <div class="farmer-badge">Heritage Farmer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Customer Love</span>
+        <h2>What Our <span class="accent">Customers Say</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"The freshness is unbelievable! I can taste the difference from supermarket vegetables. Will never go back!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">P</div>
+            <div>
+              <strong>Priya Nair</strong>
+              <span>Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card featured">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Green Market changed how my family eats. Fresh, organic, and delivered right on time. The tomatoes taste like they used to when I was a kid!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">A</div>
+            <div>
+              <strong>Anand Kumar</strong>
+              <span>Vijayawada</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Excellent quality and very reasonable prices. I love that I'm supporting local farmers. Highly recommended!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">S</div>
+            <div>
+              <strong>Sunita Reddy</strong>
+              <span>Guntur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-container contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Contact <span class="accent">Green Market</span></h2>
+        <p>Have questions about our products or want to partner with us? We'd love to hear from you!</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <p>Green Market Hub, MG Road, Vijayawada, AP 520001</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p>hello@greenmarket.in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="How can we help you?" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">🌿 Green<strong>Market</strong></div>
+        <p>Connecting farmers with conscious consumers. Fresh, organic, and delivered with love.</p>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">📷</a>
+          <a href="#">🐦</a>
+          <a href="#">▶️</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#farmers">Our Farmers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Leafy Greens</a></li>
+          <li><a href="#">Root Vegetables</a></li>
+          <li><a href="#">Fruit Vegetables</a></li>
+          <li><a href="#">Herbs & Spices</a></li>
+          <li><a href="#">Seasonal Picks</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Get weekly deals and fresh harvest updates.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 GreenMarket. All rights reserved. Made with 💚 for local farmers.</p>
+    </div>
+  </footer>
+
+  <!-- CART MODAL -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>🛒 Your Cart</h3>
+        <button onclick="toggleCart()">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">Your cart is empty 🌿</div>
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display:none">
+        <div class="cart-total">
+          Total: <strong id="cartTotal">₹0</strong>
+        </div>
+        <button class="btn-primary full-width">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
